@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_homework?serverTimezone=UTC
+        </property>
+        <!--<property name="controller.connection.characterEncoding">utf8</property>-->
+
+
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">admex281289iiLL</property>
+        <property name="show_sql">true</property>
+        <!--<property name="format_sql">true</property>-->
+        <!-- Автоматичне створення і оновлення структури БД -->
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <mapping class="net.proselyte.hibernate.model.POJO.Developer"/>
+        <mapping class="net.proselyte.hibernate.model.POJO.Skill"/>
+        <mapping class="net.proselyte.hibernate.model.POJO.Project"/>
+        <mapping class="net.proselyte.hibernate.model.POJO.Customer"/>
+        <mapping class="net.proselyte.hibernate.model.POJO.Company"/>
+    </session-factory>
+</hibernate-configuration>
